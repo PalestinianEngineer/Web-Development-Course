@@ -1,0 +1,42 @@
+Absolute File Path --> Starts at the very root folder
+Relative File Path --> path is relative to some starting point (which is the current directory)
+
+.. --> up a level
+. --> current directory
+
+In web development, the "current directory" is the directory in which the project file exists. (Relative Path =  Path relative to project file in this context)
+
+<a href="FILE PATH TO FILE">TEXT</a> ---> Link to another page of your website
+
+<a href> can take you to a website (https://link) or to another file on your computer (relative file path with respect to the project file)
+
+--> same for <img src....> (source could be link to image on web or path to image on pc)
+
+<a href......>if you put an image here, this image will take us to the destination when clicked</a>
+
+Usual Organization:
+Project Folder---> Home page File (called index.html) | Public Folder | Assets Folder
+Public Foler--> Files of other pages
+Assets Folder--> Images Folder, etc.
+
+
+HTML Boiler Plate
+<!DOCTYPE html> --> tells the browser we are useing html5
+<html lang="en"> --> stuff in between is html code
+<head> --> stuff in between is configurations (stuff our browser needs to know)
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> --> title of the webpage (this is the text shown in the tab of the webpage)
+</head>
+<body> --> stuff that will be displayed to the user (you'll write the content code here)
+    
+</body>
+</html>
+
+
+To generate the HTML border plate --> In an HTML file in VScode--> Type !, then press Enter
+
+You can host your website on github
+
+
+

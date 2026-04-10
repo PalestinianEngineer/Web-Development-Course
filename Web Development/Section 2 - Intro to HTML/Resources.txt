@@ -1,0 +1,3 @@
+HTML Tag Library: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/Heading_Elements
+
+Finds Difference between two texts (useful for comparing code): https://www.diffchecker.com/

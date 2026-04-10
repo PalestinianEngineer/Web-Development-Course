@@ -1,0 +1,13 @@
+<ul></ul> --- unordered list
+<li></li> --- list items
+<ol></ol> --- ordered list
+
+when nesting tags, indent
+
+<tag attribute=value attribute2=value2 ...>Content</tag> --- attributes structure (Seperate each attribute by a space) (attributes modify some specs of the tags they are added to_
+
+<a href="link">text</a> --- hyper-link
+
+double quotes are used to indicate tex ----> "Text"
+
+<img src="url" /> --- adds the image from the source you specify (adding the "alt" attribute provides a text to be read by the screen reader when hovered over) (you can add gif's in this tag)

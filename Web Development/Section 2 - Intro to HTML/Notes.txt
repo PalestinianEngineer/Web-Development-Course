@@ -1,0 +1,7 @@
+<h1></h1> --- Headers (1-6)
+go from h1 to h2 to h3 and back up. Don't skip levels.
+There should be only one h1 in the page
+
+<p></p> --- paragraph
+<hr/> --- horizontal line
+<br/> --- break into a new line
