@@ -1,0 +1,55 @@
+HTML (Hyper Text Markup Language) -->for content
+CSS (Cascading Style Sheets) -->for style
+
+In line CSS: you add the style attribute to the tag you want to style
+---> <tag style="property: value">....</tag>
+this is the CSS code: "property: value"
+(useful for when you want to apply a style for 1 element only)
+
+
+Internal CSS: you add the style code in between "Style" tags (located within the head tags)
+<style>
+	selector{
+		CSS code
+	}
+</style>
+The internal code is able to apply style to everything within the HTML document, but it works on the document (file) it is included in only (useful when you want to apply the style to a single page only)
+
+
+External CSS: located in a file on its own. This file has a .css extension
+Selector{
+	Style code (lines separated by ;)
+}
+
+to link this CSS file to you html file
+--> inside the head tag of the HTML file:
+<link
+	rel="stylesheet" (defines the type of the file we want to link)
+	href="relative path to the CSS file"
+/>
+Most useful format of CSS. Can be easily scaled to be applied to multiple webpages
+
+
+CSS rule: property: value
+CSS selector: tells the CSS code which HTML elements to apply the CSS rules on
+
+Selectors: 
+tag-->applies the rule on all elements that have that tag (eg: h2----> applies the rule on all h2 elements)
+
+.name ---> now, we created a class of the name "name" --->applies the CSS rule to all elements that belong to this class
+
+to add elements to a class add the class attribute to them 
+---> class="class-name"
+
+#name---> now we have created an id --> the rule will apply to the element having this id only
+
+to add an id to an element, use the id attribute
+--->id="id-name"
+
+class can be applied to multiple elements per file, while an id must be used for one element only within the same HTML file
+
+Class and id names are case sensitive
+
+tag[attribute="value"] --> applies style to all elements that have this tag AND this attribute (having that value)
+
+*---> selects all elements --> applies the style to all elements
