@@ -1,0 +1,63 @@
+CSS File Syntax:
+
+tag { Property: Value; P2:V2; ...} ---> assigns the following values to their corresponding properties for all the elements in the HTML file corresponding to this tag
+
+
+Property examples: background-color, color, font-weight, font-size, font-family, text-align
+
+For colors, you can either enter the color name (eg: red) or the color hexadecimal code (eg: #5D3891)
+
+Indentation:
+tag{
+	P1: V1;
+	P2: V2;
+	.......
+}
+
+background color:
+body: changes the background color of the whole page
+element: changes the background color of the area of that element only
+
+for font sizes: px=pixel, pt=point, em=percentage of parent size (1em = 1 x parent size), rem= percentage of the size of the root (<html>) (Nrem = N x font size of root) (no space between number and em/rem/px/pt)
+
+<a>
+	<b>.......</b>
+</a>
+=====> a is the parent of b
+
+font weights: [normal or bold] , [bolder or lighter] (changes weight by +/- 100 relative to parent's weight), [100-900] (a number within this range that determines the weight)
+
+font families: you write the font type followed by a backup generic font type (separated by a comma) (so that if an operating system doesn't have your primary font of choice, you have something to fallback to) ---> font-family: font1, font2
+
+if a font type consists of multiple words separated by a space, put it between quotation marks (eg: font-family: "Times New Roman")
+
+Font preview can differ from operating system to operating system, however if you use a font via link to google fonts, it will have the same preview on all operating systems
+
+text aligns: center, left, right, start, end, ... (relative to parent)
+
+Chrome inspector: Elements, Sources, Styles, Computed, CSS Overview
+
+width, height: px (pixel) or % (percentage of PARENT) (determines the size of the element)
+
+anything expressed in percentage is relative to the parent
+
+
+border: thickness (in px) style (eg: solid, dashed, ...) color (three parameters separated by a space)
+border-top, border-bottom, border-right, border-left: parameter --> applies this parameter for the specified side of the border (must be written AFTER the border declaration)
+border-width: top_width right_width bottom_width left_width (in px) (order is clockwise starting from the top) (must be written AFTER the border declaration) (if we put two parameters only, then first parameter will be for top and bottom and the second would be for left and right) 
+
+padding: px --> pushes the border by Npx from all the sides of the box surrounding the element (Npx up, Npx down, Npx right, Npx left) (takes 2 or 4 parameters like border-width)
+margin: px--> distance between the border of the element and everything else (Npx from all sides of the border) (takes 2 or 4 parameters like border-width)
+
+So, we have: Element->Padding->Border->Margin
+2D representation=> [Margin|Border|Padding|Element1|Padding|Border|Margin][Margin|Border|Padding|Element2|Padding|Border|Margin] (this is the CSS box model)
+
+
+<div> content (multiple elements) </div> ------> all the elements within the same div elements are grouped together (they become part of the same box affected by the CSS box model) (div becomes a big box that combines all the sub boxes of the elements inside div) (the div becomes the parent of its sub-elements)
+
+
+all elements come with their default properties (eg: color, margin), sometimes you have to override those default values
+
+css box model: all elements in the page (eg: h1, p, ...) are boxes having their own padding, borders, and margins (often only margins are there) 
+
+the properties you apply to a parent, applies to all its children (eg: div color is white, all its sub-elements will have a white color unless overridden individually)

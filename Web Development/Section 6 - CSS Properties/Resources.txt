@@ -1,0 +1,11 @@
+https://colorhunt.co/  ----> colorhunt: a website that has color pallets that you can use to design your website
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/named-color --> CSS developer documentation (colors page)
+
+https://www.csfieldguide.org.nz/en/interactives/rgb-mixer/ --> rgb mixer 
+
+fonts.google.com---> shows us a big selection of fonts and allows us to get a link for this font to include in our website
+
+chrome developer tools (inspector)
+
+https://chromewebstore.google.com/detail/pesticide/bakpbgckdnepkmkeaiomhmfcnejndkbi?pli=1 --> pesticide chrome extension (helps with debugging)
