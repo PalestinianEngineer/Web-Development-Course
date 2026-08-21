@@ -53,3 +53,6 @@ Class and id names are case sensitive
 tag[attribute="value"] --> applies style to all elements that have this tag AND this attribute (having that value)
 
 *---> selects all elements --> applies the style to all elements
+
+body--> applies the style to the page (eg: page background)
+html --> applies the style to the page (html is parent to head and body. body is the parent to all of the page's contents)
