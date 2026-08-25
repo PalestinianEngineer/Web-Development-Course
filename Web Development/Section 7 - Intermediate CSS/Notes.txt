@@ -1,0 +1,89 @@
+CSS: Cascading Style Sheet
+
+Cascading scenarios:
+Position: if a property is declared (assigned a value) multiple times , the last declaration (the last time it was declared in the code) is the one that will be expressed in the page (eg: p{ color: red, color: blue;} --> p will appear in blue , p{ color: blue;} .... p{color: red;} ---> p will appear in red) 
+lower position in code > higher position in code
+
+Specificity: the most specific selector is the one whose style will be expressed in the page
+
+id (#id{}) > attribute (element[attribute]{}) > class (.class{}) > element (element{})
+
+Type: inline > internal> external CSS
+
+
+Importance: important rule > normal rule
+
+important rule --> property: value !important;
+
+
+A>B ---> if we modify the same property in A manner and B manner, the property declared in A manner is the one that will be expressed in the page
+
+we can assign multiple classes to an element (eg: p< .... class=" class1 class2 ...."> (class names must be separated by a space")
+
+Importance> Type > Specificity > Position
+
+
+element properties not specified--> the element takes the properties of its parent (otherwise if specified, the elemnt takes its specified properties)
+
+
+combining CSS selectors:
+Group: Slector1, Slector2, ...{ ... } (selectors separated by a comma) -->applies the inner rules for all of the selectors 
+
+Child: Parent > Child {....}  ---> applies the rule to the child of the parent
+
+Descendant: Ancestor Descendant {...} --> applies the rule to the descendant of the ancestor (Selectors separated by a space)
+
+Parent-->Child--->Grand-Child--->Grand-Grand-Child-->...... ====> A->B->C->D->E ===> A is a parent and B is a child. A is an ancestor of C,D, and E. ===> Parent-Child: one level below , Ancestor-Descendant: multiple levels below
+<A>
+	<B>
+		<C>
+			<D>
+				<E>
+				<\E>
+			<\D>
+		<\C>
+	<\B>
+<\A>
+(you can walk through them using A>B>C>D>E>elements_in_E)
+(this could work too A B C D E elements_in_E ---> as long as you respect the order of the ancestry, you should be able to walk through lineages using descendant-ancestor chains) (we could ommit one or more elements (given that all elements are unique) along the lineage as long as the order is correct (eg: A B E still works))
+
+Chain: Selector1Selector2...{....} ---> Applies the rule where all the selectors are true (the element that has Selector 1 AND Selector2 AND ...) (Selectors are not separated by a space) (eg:p.class#id{...}) (chain element then class then id)
+
+we can also combine those methods together (hybrid)
+
+
+CSS Positioning:
+
+Static: Default --> Element goes under the previous element 
+
+Relative: Element is shifted (by certain coordinates) relative to its default position (Static position)
+
+Absolute: Element is positioned (shifted by certain coordinates) relative to its nearest POSITIONED (has its position property specified) ancestor (where the origin is the upper left corner of this ancestor) (if no ancestor is positioned, then it will be positioned relative to the top left corner of the PAGE)
+
+Fixed: Positioned relative to the top left corner of the BROWSER WINDOW  ( Page: when we scroll, the element stays on the page and is scrolled with it, Browser window: the element is stuck in that position in the window, it stays there even if we scroll)
+
+
+ ...{	position: static/relative/absolute/fixed;
+  	left: 50px; 
+  	top: 50px;   (could be also bottom or right) (combination of two only, one vertical coordinate and one horizontal coordinate) (relative to the element this element is relative to) (A pixels from V of element to V of relative (eg: 50 pixels from top to top) and B pixels from H to H (eg: 50 pixels from left to left)) (could be in px or % (distance = % of parent element or relative element (% of V or H dimensions))
+	(Specific to absolute positioning: z-index)
+	z-index: -n/.../-1/0/1/.../+n; ---> the z-index determines which element is displayed on top (an element with a larger z-index is displayed on top of an element with a lower z-index) (by default elements have a z-index of 0)
+     }
+the position is an additional layer in the CSS box model (it comes above margin) (CSS Box Model becomes: Position->Margin->Border->Padding->Element)
+
+border-radius: gives curvature to border (% or px) (50% gives a circle)
+
+by default, a descendant has a larger z-index than its ancestor
+
+no matter how the element looks (rounded or square or ...) css only regards it as a box containing the shaped element (consider this when positioning a curved element. Focus on the box containing it, not the edges of the element itself)
+
+All elements are boxes (CSS box model)
+
+% are always in terms of the parent (% of the parent's same property we are currently editing)
+
+In the inspector, if you select an element, do "copy -> selector" it gives you the parent child path to this element (parent>child1>child2>...>element)
+
+one thing you can do is:
+element{ general modifications you want to do for all elements of this type}
+....... element{ specific modification for this element} ---> now, this element will keep all the properties applied to all elements and only override the properties overridden here
+
