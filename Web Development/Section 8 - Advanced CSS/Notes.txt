@@ -1,0 +1,69 @@
+Display:
+...{ display:....;}
+
+. block ---> element takes the entire width of the page (the box of the element). When we add another element, it gets created below the current element since the current element occupies all of the current line. we can change the height and width of the block (box), but all new elements will be put below this element regardless of the width (even if the width is smaller than the page's width).
+
+.inline ---> the box of the element is as big as the content of the element (eg: text). if we add another INLINE element, it will get created next to the current element, and elements will just keep on getting generated next to each other until they can't fit on the same line (width of the page), then they will be put on a new line under the current one.
+we can't change the width and line of inline elements since these parameters are autofitted to the size of the element's contents.
+
+.inline-block---> inline + we can set the width and height of the block. (elements keep on getting put next to each other until the width of the page is exhausted)
+
+.none --> makes the element disappear
+
+text will rearrange itself to fit inside the block (according to the width you specify)
+images will resize themselves to fit inside the block (according to width and height)
+
+
+Float:
+....{float:...;}
+
+useful for images:
+.right--> image is placed to the right and text (from other elements (eg:p)) wraps around it
+.left--> same but on the left
+
+if we want some element not to wrap around this image, we should add to it the following CSS property:
+
+clear: left/right/both; (give it the same direction of the image to indicate that you don't want to wrap around the left/right floating image) (both is for when we have two floating elements in both directions)
+
+we can have to elements, one floats left and the other right. They will exist as two separate blocks (not wrapping around one another), one will be floating to the left and the other to the right.(of course, these elements should be inline for them to exist on the same line (level) in the first place))
+
+in some sense, float floats the element to the left or right of the page (over the width of this page)
+
+elements above the floating element aren't wrapped, elements under it are
+
+Media Query:
+@media (max-width: NNNpx){
+	CSS code
+}
+===> when the width of the page (screen) is NNN or less, this CSS code gets executed, otherwise, other it doesn't
+
+
+.min-width: NNNpx --> CSS gets executed when page width is NNN or larger
+
+@media (min-width: NNNpx) and (max-width: MMMpx) {...}
+
+NNN<MMM --> CSS is applied when width is inside the range [NNN,MMM] 
+NNN>MMM --> CSS is applied when width is outside the range [MMM,NNN] (not applied in [MMM,NNN] and applied else where outside this range)
+
+.screen(orientation: landscape) --> targets landscape screens
+.print --> targets pages when they are getting printed
+
+
+Cascading still applies when applying media queries:
+if you have multiple media queries and a CSS code not inside any media query, if all media query conditions were true (and the CSS outside any media query will always be executed), the one that is located last in the code relative to all other lines of code is the one that will be expressed in the page (Position Cascade) (that is if they were all changing the same property and conflicting)
+
+
+Span:
+comes in the middle of another element 
+eg:<p> Hello <span> Beautiful </span> World </p> (by default span has inline display value)
+allows us to format part of the element's contents individually and differently than the rest of the element's contents (you can do span{color:red;} for example)
+
+display: block---> element is put in a new line (separate than the element before it and the element after it)
+
+when you don't specify the size (width) of an element (eg: h1 containing text), it will resize itself when you make the page window smaller, however if you specify its width, the box size won't change and the contents (text) won't rearrange themselves to fit the window (the text will remain as it is)
+
+<br/> --> breaks the line (causes the thing after it to be written on a new line)
+
+to space out elements, use margins
+
+it is very useful to use % when assigning sizes (to assign size relative to screen use % NOT em or rem)
